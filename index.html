@@ -28,6 +28,22 @@
           0 10px 10px -5px rgba(0, 0, 0, 0.04);
       }
 
+      .service-img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 0.5rem 0.5rem 0 0;
+        transition: all 0.3s ease;
+      }
+
+      .service-card:hover .service-img {
+        transform: scale(1.03);
+      }
+
+      .service-content {
+        padding: 1.5rem;
+      }
+
       .nav-link {
         position: relative;
       }
@@ -195,8 +211,7 @@
             </div>
             <h3 class="text-xl font-bold mb-3">Результаты</h3>
             <p>
-              Более 200 довольных клиентов, 500+ успешных проектов и 12 лет
-              безупречной репутации на рынке.
+Мы нацелены на построение устойчивых результатов и доверительных отношений с каждым клиентом.
             </p>
           </div>
         </div>
@@ -218,131 +233,113 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <!-- Service 1 -->
           <div
-            class="service-card bg-gray-50 p-6 rounded-xl transition duration-300 fade-in"
+            class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 fade-in hover:shadow-lg"
           >
-            <div class="text-blue-600 mb-4">
-              <i class="fas fa-balance-scale text-3xl"></i>
+            <img
+              src="images/legal-service.jpg"
+              alt="Юридический консалтинг"
+              class="service-img"
+            />
+            <div class="service-content">
+              <h3 class="text-xl font-bold mb-3">Юридический консалтинг</h3>
+              <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                <li>Полное юридическое сопровождение бизнеса</li>
+                <li>Разработка и проверка договоров</li>
+                <li>Представительство в судах</li>
+              </ul>
             </div>
-            <h3 class="text-xl font-bold mb-3">Юридический консалтинг</h3>
-            <ul class="list-disc pl-5 space-y-2 text-gray-700">
-              <li>Полное юридическое сопровождение бизнеса</li>
-              <li>Разработка и проверка договоров</li>
-              <li>Представительство в судах</li>
-            </ul>
           </div>
 
-          <!-- Service 2 -->
-          <div
-            class="service-card bg-gray-50 p-6 rounded-xl transition duration-300 fade-in"
-            style="animation-delay: 0.1s"
-          >
-            <div class="text-blue-600 mb-4">
-              <i class="fas fa-calculator text-3xl"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-3">Финансовый аудит</h3>
-            <ul class="list-disc pl-5 space-y-2 text-gray-700">
-              <li>Анализ финансового состояния компании</li>
-              <li>Оптимизация налоговой нагрузки</li>
-              <li>Проверка бухгалтерской отчетности</li>
-            </ul>
-          </div>
+<!-- Service 2 -->
+<div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 fade-in hover:shadow-lg" style="animation-delay: 0.1s">
+  <img src="images/finance-service.jpg" alt="Финансовый аудит" class="service-img" />
+  <div class="service-content">
+    <h3 class="text-xl font-bold mb-3">Финансовый аудит</h3>
+    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+      <li>Анализ финансового состояния компании</li>
+      <li>Оптимизация налоговой нагрузки</li>
+      <li>Проверка бухгалтерской отчетности</li>
+    </ul>
+  </div>
+</div>
 
-          <!-- Service 3 -->
-          <div
-            class="service-card bg-gray-50 p-6 rounded-xl transition duration-300 fade-in"
-            style="animation-delay: 0.2s"
-          >
-            <div class="text-blue-600 mb-4">
-              <i class="fas fa-hard-hat text-3xl"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-3">Охрана труда</h3>
-            <ul class="list-disc pl-5 space-y-2 text-gray-700">
-              <li>Разработка системы охраны труда</li>
-              <li>Обучение сотрудников</li>
-              <li>Аудит существующих систем</li>
-            </ul>
-          </div>
+<!-- Service 3 -->
+<div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 fade-in hover:shadow-lg" style="animation-delay: 0.2s">
+  <img src="images/labor-icon.png" alt="Охрана труда" class="service-img" />
+  <div class="service-content">
+    <h3 class="text-xl font-bold mb-3">Охрана труда</h3>
+    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+      <li>Разработка системы охраны труда</li>
+      <li>Обучение сотрудников</li>
+      <li>Аудит существующих систем</li>
+    </ul>
+  </div>
+</div>
 
-          <!-- Service 4 -->
-          <div
-            class="service-card bg-gray-50 p-6 rounded-xl transition duration-300 fade-in"
-            style="animation-delay: 0.3s"
-          >
-            <div class="text-blue-600 mb-4">
-              <i class="fas fa-certificate text-3xl"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-3">Сертификация</h3>
-            <ul class="list-disc pl-5 space-y-2 text-gray-700">
-              <li>Сертификация продукции и услуг</li>
-              <li>Подготовка к международным стандартам</li>
-              <li>Получение разрешительных документов</li>
-            </ul>
-          </div>
+<!-- Service 4 -->
+<div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 fade-in hover:shadow-lg" style="animation-delay: 0.3s">
+  <img src="images/certification-icon.png" alt="Сертификация" class="service-img" />
+  <div class="service-content">
+    <h3 class="text-xl font-bold mb-3">Сертификация</h3>
+    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+      <li>Сертификация продукции и услуг</li>
+      <li>Подготовка к международным стандартам</li>
+      <li>Получение разрешительных документов</li>
+    </ul>
+  </div>
+</div>
 
-          <!-- Service 5 -->
-          <div
-            class="service-card bg-gray-50 p-6 rounded-xl transition duration-300 fade-in"
-            style="animation-delay: 0.4s"
-          >
-            <div class="text-blue-600 mb-4">
-              <i class="fas fa-virus-slash text-3xl"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-3">Эпидконтроль</h3>
-            <ul class="list-disc pl-5 space-y-2 text-gray-700">
-              <li>Разработка противоэпидемических мер</li>
-              <li>Аудит санитарного состояния</li>
-              <li>Обучение персонала</li>
-            </ul>
-          </div>
+<!-- Service 5 -->
+<div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 fade-in hover:shadow-lg" style="animation-delay: 0.4s">
+  <img src="images/epid-icon.png" alt="Эпидконтроль" class="service-img" />
+  <div class="service-content">
+    <h3 class="text-xl font-bold mb-3">Эпидконтроль</h3>
+    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+      <li>Разработка противоэпидемических мер</li>
+      <li>Аудит санитарного состояния</li>
+      <li>Обучение персонала</li>
+    </ul>
+  </div>
+</div>
 
-          <!-- Service 6 -->
-          <div
-            class="service-card bg-gray-50 p-6 rounded-xl transition duration-300 fade-in"
-            style="animation-delay: 0.5s"
-          >
-            <div class="text-blue-600 mb-4">
-              <i class="fas fa-file-contract text-3xl"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-3">Тендерное сопровождение</h3>
-            <ul class="list-disc pl-5 space-y-2 text-gray-700">
-              <li>Подготовка документации для участия</li>
-              <li>Анализ тендерной документации</li>
-              <li>Юридическая поддержка</li>
-            </ul>
-          </div>
+<!-- Service 6 -->
+<div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 fade-in hover:shadow-lg" style="animation-delay: 0.5s">
+  <img src="images/tender-icon.png" alt="Тендерное сопровождение" class="service-img" />
+  <div class="service-content">
+    <h3 class="text-xl font-bold mb-3">Тендерное сопровождение</h3>
+    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+      <li>Подготовка документации для участия</li>
+      <li>Анализ тендерной документации</li>
+      <li>Юридическая поддержка</li>
+    </ul>
+  </div>
+</div>
 
-          <!-- Service 7 -->
-          <div
-            class="service-card bg-gray-50 p-6 rounded-xl transition duration-300 fade-in"
-            style="animation-delay: 0.6s"
-          >
-            <div class="text-blue-600 mb-4">
-              <i class="fas fa-robot text-3xl"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-3">Автоматизация</h3>
-            <ul class="list-disc pl-5 space-y-2 text-gray-700">
-              <li>Внедрение CRM и ERP систем</li>
-              <li>Цифровая трансформация бизнеса</li>
-              <li>Оптимизация бизнес-процессов</li>
-            </ul>
-          </div>
+<!-- Service 7 -->
+<div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 fade-in hover:shadow-lg" style="animation-delay: 0.6s">
+  <img src="images/automation-icon.png" alt="Автоматизация" class="service-img" />
+  <div class="service-content">
+    <h3 class="text-xl font-bold mb-3">Автоматизация</h3>
+    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+      <li>Внедрение CRM и ERP систем</li>
+      <li>Цифровая трансформация бизнеса</li>
+      <li>Оптимизация бизнес-процессов</li>
+    </ul>
+  </div>
+</div>
 
-          <!-- Service 8 -->
-          <div
-            class="service-card bg-gray-50 p-6 rounded-xl transition duration-300 fade-in"
-            style="animation-delay: 0.7s"
-          >
-            <div class="text-blue-600 mb-4">
-              <i class="fas fa-user-graduate text-3xl"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-3">Обучение и подбор персонала</h3>
-            <ul class="list-disc pl-5 space-y-2 text-gray-700">
-              <li>Профессиональное обучение сотрудников</li>
-              <li>Подбор квалифицированного персонала</li>
-              <li>Аттестация и сертификация</li>
-            </ul>
-          </div>
-        </div>
+<!-- Service 8 -->
+<div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 fade-in hover:shadow-lg" style="animation-delay: 0.7s">
+  <img src="images/training-icon.png" alt="Обучение персонала" class="service-img" />
+  <div class="service-content">
+    <h3 class="text-xl font-bold mb-3">Обучение и подбор персонала</h3>
+    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+      <li>Профессиональное обучение сотрудников</li>
+      <li>Подбор квалифицированного персонала</li>
+      <li>Аттестация и сертификация</li>
+    </ul>
+  </div>
+</div>
       </div>
     </section>
 
