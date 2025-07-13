@@ -80,6 +80,13 @@
     </style>
   </head>
   <body class="font-sans text-gray-800">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 bg-white z-50 flex items-center justify-center">
+      <div id="loading-logo" class="text-green-600 text-6xl opacity-0">
+          <img src="images/status.png" alt="logo" class="w-10" />
+      </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="fixed w-full bg-white shadow-md z-50">
       <div class="container mx-auto px-6 py-3">
@@ -254,11 +261,13 @@
 <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 fade-in hover:shadow-lg" style="animation-delay: 0.1s">
   <img src="images/finance-service.jpg" alt="Финансовый аудит" class="service-img" />
   <div class="service-content">
-    <h3 class="text-xl font-bold mb-3">Финансовый аудит</h3>
-    <ul class="list-disc pl-5 space-y-2 text-gray-700">
-      <li>Анализ финансового состояния компании</li>
-      <li>Оптимизация налоговой нагрузки</li>
-      <li>Проверка бухгалтерской отчетности</li>
+<h3 class="text-xl font-bold mb-3">Аутсорсинг бухгалтерского учета</h3>
+<ul class="list-disc pl-5 space-y-2 text-gray-700">
+  <li>Ведение бухгалтерского и налогового учета</li>
+  <li>Подготовка и сдача отчетности</li>
+  <li>Бухгалтерские консультации</li>
+</ul>
+
     </ul>
   </div>
 </div>
@@ -441,7 +450,7 @@
                   <i class="fas fa-map-marker-alt text-blue-600 mt-1 mr-4"></i>
                   <div>
                     <p class="font-semibold">Адрес:</p>
-                    <p class="text-gray-600">г. Астана, ул. Сембинов, 25</p>
+                    <p class="text-gray-600">г. Астана, БЦ Абу-Даби</p>
                   </div>
                 </div>
 
@@ -504,7 +513,7 @@
                   >
                     <option>Выберите услугу</option>
                     <option>Юридический консалтинг</option>
-                    <option>Финансовый аудит</option>
+                    <option>Аутсорсинг бухгалтерского учета</option>
                     <option>Охрана труда</option>
                     <option>Сертификация</option>
                     <option>Эпидконтроль</option>
@@ -560,7 +569,7 @@
               </li>
               <li>
                 <a href="#services" class="text-gray-400 hover:text-white transition"
-                  >Финансовый аудит</a
+                  >Аутсорсинг бухгалтерского учета</a
                 >
               </li>
               <li>
@@ -602,7 +611,7 @@
             <ul class="space-y-3 text-gray-400">
               <li class="flex items-start">
                 <i class="fas fa-map-marker-alt mt-1 mr-3 text-sm"></i>
-                <span>г. Астана, ул. Сембинов, 25</span>
+                <span>г. Астана, БЦ Абу-Даби</span>
               </li>
               <li class="flex items-start">
                 <i class="fas fa-phone-alt mt-1 mr-3 text-sm"></i>
@@ -624,8 +633,7 @@
             <h3 class="text-lg font-bold mb-4">Мы на карте</h3>
             <div class="h-48 bg-gray-700 rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2501.3446526989433!2d71.4548233!3d51.1758703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x424581245699f6ad%3A0x25cbba61b4cf105!2z0JHQpiAi0JXRgdC10Lki!5e0!3m2!1sru!2skz!4v1751451217997!5m2!1sru!2skz"
-                width="100%"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7290.801785538783!2d71.43033315098859!3d51.12126643913638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4245848285937047%3A0xf1501c0ee5909d85!2sAbu-Dhabi%20Plaza!5e0!3m2!1sru!2skz!4v1752430968281!5m2!1sru!2skz"                width="100%"
                 height="100%"
                 style="border: 0"
                 allowfullscreen=""
@@ -640,7 +648,7 @@
         <div
           class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400 fade-in"
         >
-          <p>&copy; 2024 ТОО "Status Prof Group". Все права защищены.</p>
+          <p>&copy; 2025 ТОО "Status Prof Group". Все права защищены.</p>
         </div>
       </div>
     </footer>
@@ -653,7 +661,46 @@
       <i class="fas fa-arrow-up"></i>
     </button>
 
+    <style>
+      /* Loading animation */
+      @keyframes scaleIn {
+        0% { transform: scale(0.5); opacity: 0; }
+        50% { transform: scale(1.1); opacity: 1; }
+        100% { transform: scale(1); opacity: 1; }
+      }
+      @keyframes fadeOut {
+        0% { opacity: 1; }
+        100% { opacity: 0; }
+      }
+    </style>
+
     <script>
+      // Loading screen animation
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadingScreen = document.getElementById('loading-screen');
+        const loadingLogo = document.getElementById('loading-logo');
+        
+        // Scale in animation
+        loadingLogo.style.animation = 'scaleIn 0.8s ease-out forwards';
+        
+                // After 1 second, fade out and remove loading screen
+        setTimeout(() => {
+          loadingScreen.style.animation = 'fadeOut 0.5s ease-out forwards';
+          setTimeout(() => {
+            loadingScreen.remove();
+          }, 500);
+        }, 1000);
+
+
+        // After 2 seconds, fade out and remove loading screen
+        setTimeout(() => {
+          loadingScreen.style.animation = 'fadeOut 0.5s ease-out forwards';
+          setTimeout(() => {
+            loadingScreen.remove();
+          }, 500);
+        }, 2000);
+      });
+
       // Mobile menu toggle
       const menuBtn = document.getElementById("menu-btn");
       const mobileMenu = document.getElementById("mobile-menu");
